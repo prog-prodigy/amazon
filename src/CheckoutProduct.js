@@ -2,13 +2,15 @@ import React from 'react'
 import './CheckoutProduct.css'
 import StarIcon from '@mui/icons-material/Star';
 import { useStateValue } from './StateProvider';
-const CheckoutProduct = ({title,price,rating,image,id}) => {
+import {motion} from 'framer-motion'
+const CheckoutProduct = ({title,price,rating,image,id,hideBtn}) => {
     const [{basket},dispatch]= useStateValue()
     
     const removefromBasket=()=>{
         dispatch({type:'REMOVE_FROM_BASKET',payload:{id:id}})
     }
   return (
+    <motion.div layout transition>
     <div className='checkoutProduct'>
             <img className='checkoutProduct-image' src={image} alt='cartproduct'/>
             <div className='checkoutProduct-info'>
@@ -18,9 +20,10 @@ const CheckoutProduct = ({title,price,rating,image,id}) => {
                     <strong>{price}</strong>
                 </p>
                 <p className='checkoutProduct-rating'>{Array(rating).fill().map(()=> <p><StarIcon style={{color:'#fc7'}}/></p>)}</p>
-        <button onClick={removefromBasket}>Remove from Basket</button>
+     {!hideBtn && <button onClick={removefromBasket}>Remove from Basket</button>}   
             </div>
     </div>
+    </motion.div>
   )
 }
 

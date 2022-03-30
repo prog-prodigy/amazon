@@ -10,7 +10,13 @@ max-height: 400px;
 min-width: 100px;
 background-color: white;
 z-index: 1;
-
+border-radius: 5px;
+transition: transform 0.5s;
+box-shadow: 0px 5px 10px rgba(112, 111, 111, 0.575);
+}
+.product:hover{
+    transform: scale(1.01);
+    
 }
 .product-image{
     max-height: 200px;

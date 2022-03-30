@@ -1,12 +1,44 @@
+import Carousel from 'react-bootstrap/Carousel'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 import './Home.css'
 import banner from './images/banner.jpg'
 import Product from './Product'
+import Footer from './Footer';
 function Home() {
   return (
     <div className='home'>
         <div className='home-container'>
-            <img className='home-image' src={banner} alt='banner'/>
+        <Carousel className='carousel'>
+            <Carousel.Item>
+              <img
+                className="home-image"
+                src={banner}
+                alt="First slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="home-image"
+                src='https://m.media-amazon.com/images/I/71MwDPWV9XL._SX3000_.jpg'
+                alt="First slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block home-image"
+                src='https://m.media-amazon.com/images/I/61pxhbXv8tL._SX3000_.jpg'
+                alt="second slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="home-image"
+                src='https://m.media-amazon.com/images/I/61rwqMFMSUL._SX3000_.jpg'
+                alt="second slide"
+              />
+            </Carousel.Item>
+          </Carousel>
             <div className='home-row'>
                 <Product title={'Apple iPhone 12 (128GB) - Blue'} image={'https://m.media-amazon.com/images/I/71ZOtNdaZCL._SX679_.jpg'} price={60490} id={'42321'} rating={4} />
                 <Product title={'Mi Notebook Pro QHD+ IPS Anti Glare Display Intel Core i5-11300H 11th Gen 14-inch(35.56 cms) Thin and Light Laptop'} image={'https://m.media-amazon.com/images/I/41O7cCoUoVL._AC_SY400_.jpg'}
@@ -22,6 +54,7 @@ function Home() {
             <Product title={'Microsoft Surface Laptop Studio - 14.4" Touchscreen - Intel® Core™ i5 - 16GB Memory - 256GB SSD - Platinum '} id={'039820'} image={'https://m.media-amazon.com/images/I/61UGE9cZVlL._AC_UY327_QL65_.jpg'} rating={5} price={373999} />
                 
             </div>
+        
         </div>
     </div>
   )

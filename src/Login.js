@@ -47,7 +47,7 @@ const Login = () => {
         />
       </Link>
       <div className="login-container">
-        <h1>Sign in</h1>
+        <h2>Sign in</h2>
         <form>
           <h5>E-mail</h5>
           <input type="email" onChange={(e) => setEmail(e.target.value)} />

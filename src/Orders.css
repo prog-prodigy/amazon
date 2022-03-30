@@ -1,0 +1,46 @@
+.order{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: rgb(237,235 , 235);
+    position: relative;
+}
+.orders-order{
+  width: 50%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.order-text{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+}
+.order-item{
+    
+    margin: 20px 0;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+
+}
+.box{
+    height: 80vh;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    
+}
+.order-null-image{
+    width: 60%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}

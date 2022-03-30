@@ -4,15 +4,18 @@ import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import CheckoutProduct from "./CheckoutProduct";
 import { useStateValue } from "./StateProvider";
+import Footer from './Footer'
+
 const Checkout = () => {
-  const [{basket},dipatch]= useStateValue()
+  const [{basket,user},dipatch]= useStateValue()
 
   return (
+    <>
     <div className="checkout">
       <div className="checkout-left">
         <img className="checkout-ad" src={ad} alt="ad"></img>
         <h2 className="checkout-title">
-              Shopping Basket
+            {user}{user? `'s Shopping Basket`: 'Shopping Basket'}
        
           </h2>
          {basket.map(item=>{
@@ -25,6 +28,8 @@ const Checkout = () => {
           
       </div>
     </div>
+    
+      </>
   );
 };
 
